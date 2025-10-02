@@ -483,7 +483,8 @@ body {
             letter-spacing: 0.5px;
             color: #00bfff;
         }
-        .tech{
+
+        .tech {
             color: #045367;
             font-size: medium;
         }
@@ -645,7 +646,8 @@ body {
                     background: linear-gradient(90deg, #3d98d9 0%, #515ed1 100%);
                     transition: transform 0.5s ease;
                 }
-                button:hover{
+
+                button:hover {
                     transform: scale(1.1);
                 }
             }
@@ -665,7 +667,8 @@ body {
             #reach {
                 margin-right: 15px;
             }
-            #Contact{
+
+            #Contact {
                 margin-bottom: 120px;
             }
         }
@@ -707,7 +710,7 @@ body {
                 transition: transform 0.3s ease-in-out;
             }
 
-            a:hover{
+            a:hover {
                 color: rgb(63, 192, 235);
                 transform: scale(1.1);
             }
@@ -721,22 +724,14 @@ body {
             margin: 5px 0;
             width: 80%
         }
-        .cpy:hover{
+
+        .cpy:hover {
             text-decoration: underline;
             transform: scale(0.95);
         }
     }
 }
 
-html{
+html {
     scroll-behavior: smooth;
-}
-section{
-    opacity: 0;
-    transform: rotateY(20px);
-    transition: all 0.8s ease-in-out;
-}
-section.visible{
-    opacity: 1;
-    transform: rotateY(0);
 }

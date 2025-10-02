@@ -50,7 +50,7 @@ const work_details = [
   { img: 'comm.jpg', title: 'Ecommerce', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Website" },
   { img: 'to-do.jpg', title: 'To-Do-List', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/To-Do-List" },
   { img: 'cal.png', title: 'Calculator', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Calculator" },
-  { img: 'port.jpg', title: 'Portfolio', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Weather-Dashboard" },
+  { img: 'port.jpg', title: 'Portfolio', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Portfolio" },
 ];
 
 function render(work) {
@@ -99,12 +99,3 @@ form.addEventListener('submit', function (reload) {
   form.reset();
 });
 
-// Section visible
-window.addEventListener('scroll', () => {
-  document.querySelectorAll('section').forEach(sec => {
-    const rect = sec.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
-      sec.classList.add('visible');
-    }
-  });
-});
