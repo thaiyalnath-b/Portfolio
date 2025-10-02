@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Projects section
 const work_details = [
-  { img: 'in.jpg', title: 'Instagram', tech: "( HTML, CSS )", link: "https://github.com/thaiyalnath-b/Insta" },
-  { img: 'comm.jpg', title: 'Ecommerce', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Website" },
-  { img: 'to-do.jpg', title: 'To-Do-List', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/To-Do-List" },
-  { img: 'cal.png', title: 'Calculator', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Calculator" },
-  { img: 'port.jpg', title: 'Portfolio', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Portfolio" },
+  { img: 'instagram.png', title: 'Instagram', tech: "( HTML, CSS )", link: "https://github.com/thaiyalnath-b/Insta" },
+  { img: 'ecomerce.png', title: 'Ecommerce', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Website" },
+  { img: 'shop.png', title: 'To-Do-List', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/To-Do-List" },
+  { img: 'calculator.png', title: 'Calculator', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Calculator" },
+  { img: 'po.png', title: 'Portfolio', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Portfolio" },
 ];
 
 function render(work) {
@@ -58,7 +58,7 @@ function render(work) {
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
-          <img src="assets/images/${work.img}" alt="${work.title}">
+          <img src="assets/images/img/${work.img}" alt="${work.title}">
           <h5>${work.title}</h5>
           <p class="tech">Build with: ${work.tech}</p>
         </div>
