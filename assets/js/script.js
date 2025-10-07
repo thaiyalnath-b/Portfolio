@@ -22,27 +22,27 @@ const card_details = [
   { img: 'react.png', title: 'React' },
 ];
 
-function renderCard(card) {
+function renderCard(card){
   return `
-    <div class="card">
-      <img src="assets/images/${card.img}" alt="${card.title}">
-      <h5>${card.title}</h5>
-    </div>
+  <div class ="card">
+  <img src ="assets/images/${card.img}" alt="${card.title}">
+  <h5>${card.title}</h5>
+  </div>
   `;
 }
-
-function renderProducts(cards) {
-  const cards_container = document.querySelector('#cards');
+function renderProducts(cards){
+  const cards_container = document.getElementById('cards');
   let result = '';
-  for (let card of cards) {
+  for(let card of cards){
     result += renderCard(card);
   }
   cards_container.innerHTML = result;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', ()=> {
   renderProducts(card_details);
 });
+
 
 // Projects section
 const work_details = [
@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // Send Message Button
 const form = document.getElementById('reach');
 
-form.addEventListener('submit', function (reload) {
-  reload.preventDefault();
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
 
   const name = form.name.value;
   const email = form.email.value;
