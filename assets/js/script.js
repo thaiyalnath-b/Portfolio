@@ -15,17 +15,17 @@ navbarCollapse.addEventListener('hidden.bs.collapse', () => {
 
 // Skills section
 const card_details = [
-  { img: 'html.png', title: 'HTML' },
-  { img: 'cs.webp', title: 'CSS' },
+  { img: 'html-5.png', title: 'HTML' },
+  { img: 'css-3.png', title: 'CSS' },
   { img: 'bs.png', title: 'Bootstrap' },
-  { img: 'jss.png', title: 'JavaScript' },
-  { img: 'react.png', title: 'React' },
+  { img: 'js.png', title: 'JavaScript' },
+  { img: 'science.png', title: 'React' },
 ];
 
 function renderCard(card){
   return `
   <div class ="card">
-  <img src ="assets/images/${card.img}" alt="${card.title}">
+  <img src ="assets/images/img/${card.img}" alt="${card.title}">
   <h5>${card.title}</h5>
   </div>
   `;
@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 // Projects section
 const work_details = [
-  { img: 'instagram.png', title: 'Instagram', tech: "( HTML, CSS )", link: "https://github.com/thaiyalnath-b/Insta" },
-  { img: 'ecomerce.png', title: 'Ecommerce', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Website" },
-  { img: 'shop.png', title: 'To-Do-List', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/To-Do-List" },
-  { img: 'calculator.png', title: 'Calculator', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Calculator" },
-  { img: 'po.png', title: 'Portfolio', tech: "( HTML, CSS, JS )", link: "https://github.com/thaiyalnath-b/Portfolio" },
+  { img: 'ig.jpg', title: 'Instagram Clone', tech: "( HTML, CSS )", link: "https://thaiyalnath-b.github.io/Insta/", msg:"Developed a responsive Instagram clone using HTML and CSS, featuring a profile-style layout and interactive design elements."},
+  { img: 'ec.jpeg', title: 'E-commerce', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Website/", msg:"Developed a responsive e-commerce website using HTML, CSS, and JavaScript, featuring product listings and a dynamic shopping cart." },
+  { img: 'td.avif', title: 'To-Do-List', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/To-Do-List/", msg:"Developed a to-do list app using HTML, CSS, and JavaScript with features for adding, deleting, and completing tasks." },
+  { img: 'ca.png', title: 'Calculator', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Calculator/", msg:"Developed a functional calculator using HTML, CSS, and JavaScript, supporting basic arithmetic operations with a responsive design." },
+  { img: 'pf.png', title: 'Portfolio', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Portfolio/", msg:"Built a personal portfolio using HTML, CSS, and JavaScript to showcase projects and skills with a responsive and user-friendly design." },
 ];
 
 function render(work) {
@@ -60,9 +60,12 @@ function render(work) {
         <div class="card-front">
           <img src="assets/images/img/${work.img}" alt="${work.title}">
           <h5>${work.title}</h5>
-          <p class="tech">Build with: ${work.tech}</p>
         </div>
         <div class="card-back">
+        <div class="back-msg">
+            <p class="msg"><span>${work.title}</span>: ${work.msg}</p>
+            <p class="tech"><span>Tech Stack:</span> ${work.tech}</p>
+        </div>
           <a href="${work.link}" target="_blank" class="btn">Explore My Work</a>
         </div>
       </div>
