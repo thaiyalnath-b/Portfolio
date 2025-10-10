@@ -66,7 +66,7 @@ function render(work) {
             <p class="msg"><span>${work.title}</span>: ${work.msg}</p>
             <p class="tech"><span>Tech Stack:</span> ${work.tech}</p>
         </div>
-          <a href="${work.link}" target="_blank" class="btn">Explore My Work</a>
+          <a href="${work.link}" target="_blank" class="btn">View Demo</a>
         </div>
       </div>
     </div>
@@ -89,16 +89,23 @@ document.addEventListener('DOMContentLoaded', () => {
 // Send Message Button
 const form = document.getElementById('reach');
 
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // stop page reload
 
-  const name = form.name.value;
-  const email = form.email.value;
-  const message = form.msg.value;
-
-  console.log(`Name: ${name}, Email: ${email}, Message: ${message}.`);
-  alert('Your message has been Sent!');
-
-  form.reset();
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(response => {
+    if (response.ok) {
+      alert("Message sent successfully!");
+      form.reset(); // clear form
+    } else {
+      alert("Oops! Something went wrong.");
+    }
+  })
+  .catch(error => alert("Error sending message: " + error));
 });
+
 
