@@ -506,10 +506,10 @@ body {
             }
             .back-msg {
                  border: 1px solid ghostwhite;
-                 padding: 10px;
-                 margin: 10px;
+                 padding: 5px;
+                 margin: 5px;
                 border-radius: 10px;
-                max-height: 200px;
+                height: 210px;
             }
             .tech {
                 color: #C9D1D9;

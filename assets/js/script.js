@@ -22,7 +22,7 @@ const card_details = [
   { img: 'science.png', title: 'React' },
 ];
 
-function renderCard(card){
+function renderCard(card) {
   return `
   <div class ="card">
   <img src ="assets/images/img/${card.img}" alt="${card.title}">
@@ -30,27 +30,27 @@ function renderCard(card){
   </div>
   `;
 }
-function renderProducts(cards){
+function renderProducts(cards) {
   const cards_container = document.getElementById('cards');
   let result = '';
-  for(let card of cards){
+  for (let card of cards) {
     result += renderCard(card);
   }
   cards_container.innerHTML = result;
 }
 
-document.addEventListener('DOMContentLoaded', ()=> {
+document.addEventListener('DOMContentLoaded', () => {
   renderProducts(card_details);
 });
 
 
 // Projects section
 const work_details = [
-  { img: 'ig.jpg', title: 'Instagram Clone', tech: "( HTML, CSS )", link: "https://thaiyalnath-b.github.io/Insta/", msg:"Developed a responsive Instagram clone using HTML and CSS, featuring a profile-style layout and interactive design elements."},
-  { img: 'ec.jpeg', title: 'E-commerce', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Website/", msg:"Developed a responsive e-commerce website using HTML, CSS, and JavaScript, featuring product listings and a dynamic shopping cart." },
-  { img: 'td.avif', title: 'To-Do-List', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/To-Do-List/", msg:"Developed a to-do list app using HTML, CSS, and JavaScript with features for adding, deleting, and completing tasks." },
-  { img: 'ca.png', title: 'Calculator', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Calculator/", msg:"Developed a functional calculator using HTML, CSS, and JavaScript, supporting basic arithmetic operations with a responsive design." },
-  { img: 'pf.png', title: 'Portfolio', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Portfolio/", msg:"Built a personal portfolio using HTML, CSS, and JavaScript to showcase projects and skills with a responsive and user-friendly design." },
+  { img: 'ec.jpeg', title: 'E-commerce', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Website/", msg: "Developed a responsive e-commerce website using HTML, CSS, and JavaScript, featuring product listings and a dynamic shopping cart." },
+  { img: 'weather.png', title: 'Weather Dashboard', tech: "( HTML, CSS, JavaScript )", link:"https://thaiyalnath-b.github.io/Weather-Dashboard/", msg: "Built a responsive Weather Dashboard using HTML, CSS, and JavaScript with real-time updates and city search functionality." },
+  { img: 'td.avif', title: 'To-Do-List', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/To-Do-List/", msg: "Developed a to-do list app using HTML, CSS, and JavaScript with features for adding, deleting, and completing tasks." },
+  { img: 'ca.png', title: 'Calculator', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Calculator/", msg: "Developed a functional calculator using HTML, CSS, and JavaScript, supporting basic arithmetic operations with a responsive design." },
+  { img: 'pf.png', title: 'Portfolio', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Portfolio/", msg: "Built a personal portfolio using HTML, CSS, and JavaScript to showcase projects and skills with a responsive and user-friendly design." },
 ];
 
 function render(work) {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Send Message Button
 const form = document.getElementById('reach');
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {
   e.preventDefault(); // stop page reload
 
   fetch(form.action, {
@@ -97,15 +97,15 @@ form.addEventListener('submit', function(e) {
     body: new FormData(form),
     headers: { 'Accept': 'application/json' }
   })
-  .then(response => {
-    if (response.ok) {
-      alert("Message sent successfully!");
-      form.reset(); // clear form
-    } else {
-      alert("Oops! Something went wrong.");
-    }
-  })
-  .catch(error => alert("Error sending message: " + error));
+    .then(response => {
+      if (response.ok) {
+        alert("Message sent successfully!");
+        form.reset(); // clear form
+      } else {
+        alert("Oops! Something went wrong.");
+      }
+    })
+    .catch(error => alert("Error sending message: " + error));
 });
 
 
