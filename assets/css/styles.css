@@ -20,7 +20,8 @@ body {
 
         .navbar-brand {
             font-size: 2em;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
             color: #EAEAEA !important;
         }
 
@@ -49,15 +50,33 @@ body {
         .nav-item {
             a {
                 color: white;
-                font-family: 'Times New Roman', Times, serif;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
                 font-size: 1.1em;
+                transition: color 0.3s;
+                width: fit-content;
+            }
+
+            a:hover {
+                color: rgb(172, 172, 172) !important;
+                text-shadow: #FFF 0px 0px 5px,
+                    #1b68c7 0px 0px 20px,
+                    #1b68c7 0px 0px 30px,
+                    #1b68c7 0px 0px 40px,
+                    #1b68c7 0px 0px 50px,
+                    #1b68c7 0px 0px 75px;
+            }
+
+            a.active {
+                border: none;
+                box-shadow: 0 5px 0 white;
+                text-shadow: #FFF 0px 0px 5px,
+                    #1b68c7 1px 1px 50px,
+                    #1b68c7 1px 1px 75px;
             }
         }
 
-        a:hover {
-            color: rgb(172, 172, 172) !important;
-            width: fit-content;
-        }
+
     }
 
     main {
@@ -115,8 +134,6 @@ body {
             }
 
             .pic {
-                perspective: 1000px;
-
                 img {
                     transform: rotateX(0deg);
                     width: 450px;
@@ -128,6 +145,7 @@ body {
 
                 img:hover {
                     transform: scale(1.02);
+                    filter: drop-shadow(2px 2px 10px #0575cb);
                 }
             }
 
@@ -193,7 +211,6 @@ body {
 
         /* About Section */
         #About {
-            /* background-color: yellow; */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -230,7 +247,7 @@ body {
 
             .slogan {
                 margin-bottom: 15px;
-                font-size: 1.3em;
+                font-size: 1.4em;
                 font-style: italic;
             }
 
@@ -238,10 +255,6 @@ body {
                 p {
                     margin-top: 10px;
                     font-size: 1.1em;
-                }
-
-                b {
-                    font-size: 1.2em;
                 }
             }
         }
@@ -311,7 +324,7 @@ body {
             justify-content: center;
             align-items: center;
             padding: 40px 20px;
-           font-family: 'Inter', 'Roboto', sans-serif;
+            font-family: 'Inter', 'Roboto', sans-serif;
             color: white;
             height: 100vh;
             padding: 80px 20px;
@@ -442,8 +455,8 @@ body {
             }
 
             .card {
-                width: 210px;
-                height: 280px;
+                width: 215px;
+                min-height: 300px;
                 perspective: 1000px;
                 cursor: pointer;
                 border-radius: 15px;
@@ -501,29 +514,34 @@ body {
                 font-size: 1.3em;
                 font-weight: 600;
                 letter-spacing: 0.5px;
-                /* color: #58A6FF; */
                 color: white;
             }
+
             .back-msg {
-                 border: 1px solid ghostwhite;
-                 padding: 5px;
-                 margin: 5px;
+                border: 1px solid ghostwhite;
+                padding: 5px;
+                margin: 10px 5px;
                 border-radius: 10px;
                 height: 210px;
+                color: #E6EDF3;
+                background-color: #161B22;
             }
+
             .tech {
                 color: #C9D1D9;
                 font-size: 0.8em;
-                span{
+
+                span {
                     color: white;
                     font-size: 1.3em;
                 }
             }
-            .msg{
+
+            .msg {
                 color: #C9D1D9;
                 font-size: 0.8em;
-                
-                span{
+
+                span {
                     font-size: 1.4em;
                     color: white;
                 }
@@ -537,7 +555,7 @@ body {
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
-                border: none;
+                border: 1px solid white;
                 backface-visibility: hidden;
                 pointer-events: auto;
 
@@ -556,8 +574,10 @@ body {
 
                 .btn:hover {
                     background: white;
-                    color: #0D1117;
+                    color: #0b6eb1;
                     transform: scale(1.05);
+                    box-shadow: rgba(131, 233, 239, 0.12) 0px 2px 4px 0px,
+                        rgba(149, 217, 234, 0.32) 0px 2px 16px 0px;
                 }
             }
         }
@@ -735,6 +755,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         font-family: 'Inter', 'Roboto', sans-serif;
         color: white;
         box-shadow: 1px 1px 8px 1px rgb(63, 192, 235);

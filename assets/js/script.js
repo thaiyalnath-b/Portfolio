@@ -12,6 +12,35 @@ navbarCollapse.addEventListener('hidden.bs.collapse', () => {
   icon.classList.replace('bi-x', 'bi-list');
 });
 
+// Navbar Section
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let currentSection = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 70;
+    if (pageYOffset >= sectionTop) {
+      currentSection = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(nav => {
+    nav.classList.remove("active");
+  });
+  if (currentSection === "" || currentSection === "Home") {
+    document.querySelector('.nav-link[href="#Home"]').classList.add("active");
+  }
+  else {
+    const activeLink = document.querySelector(`.nav-link[href="#${currentSection}"]`);
+    if (activeLink) {
+      activeLink.classList.add("active");
+    }
+  }
+
+});
+
 
 // Skills section
 const card_details = [
@@ -47,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Projects section
 const work_details = [
   { img: 'ec.jpeg', title: 'E-commerce', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Website/", msg: "Developed a responsive e-commerce website using HTML, CSS, and JavaScript, featuring product listings and a dynamic shopping cart." },
-  { img: 'weather.png', title: 'Weather Dashboard', tech: "( HTML, CSS, JavaScript )", link:"https://thaiyalnath-b.github.io/Weather-Dashboard/", msg: "Built a responsive Weather Dashboard using HTML, CSS, and JavaScript with real-time updates and city search functionality." },
+  { img: 'weather.png', title: 'Weather Dashboard', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Weather-Dashboard/", msg: "Built a responsive Weather Dashboard using HTML, CSS, and JavaScript with real-time updates and city search functionality." },
   { img: 'td.avif', title: 'To-Do-List', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/To-Do-List/", msg: "Developed a to-do list app using HTML, CSS, and JavaScript with features for adding, deleting, and completing tasks." },
   { img: 'ca.png', title: 'Calculator', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Calculator/", msg: "Developed a functional calculator using HTML, CSS, and JavaScript, supporting basic arithmetic operations with a responsive design." },
   { img: 'pf.png', title: 'Portfolio', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Portfolio/", msg: "Built a personal portfolio using HTML, CSS, and JavaScript to showcase projects and skills with a responsive and user-friendly design." },
