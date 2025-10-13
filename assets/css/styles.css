@@ -58,7 +58,7 @@ body {
             }
 
             a:hover {
-                color: rgb(252, 252, 252) !important;
+                color: #58A6FF;
                 text-shadow: #FFF 0px 0px 5px,
                     #1b68c7 0px 0px 20px,
                     #1b68c7 0px 0px 30px,
@@ -69,14 +69,15 @@ body {
 
             a.active {
                 border: none;
-                color: rgb(33, 246, 228);
+                color: #21f6e4;
                 box-shadow: 0 5px 0 white;
                 text-shadow: #FFF 0px 0px 5px,
                     #1b68c7 1px 1px 50px,
                     #1b68c7 1px 1px 75px;
             }
         }
-        .bi{
+
+        .bi {
             transition: all 0.3s ease;
         }
 
@@ -92,7 +93,7 @@ body {
             align-items: center;
             height: 100vh;
             gap: 70px;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Montserrat', sans-serif;
             padding: 20px;
             flex-wrap: wrap;
 
@@ -221,7 +222,7 @@ body {
             text-align: justify;
             height: auto;
             /* height: 100vh; */
-            color: white;
+            color: #E6EDF3;
             gap: 50px;
             padding: 100px 20px;
             margin: 20px 100px;
@@ -230,7 +231,8 @@ body {
 
             img {
                 border-radius: 5px;
-                max-width: 100%;
+                width: 100%;
+                max-width: 300px;
                 height: auto;
                 filter: drop-shadow(2px 2px 20px rgb(2, 72, 96));
             }
@@ -238,28 +240,39 @@ body {
             h2 {
                 margin-bottom: 10px;
                 font-size: 3em;
-                display: flex;
+                text-align: center;
                 justify-content: center;
                 font-weight: 600;
+                color: #58A6FF;
             }
 
             .hero {
                 margin-bottom: 15px;
                 font-size: 1.1em;
-                line-height: 1.6;
+                line-height: 1.8;
+                background-color: #161B22;
+                padding: 20px;
+                border-radius: 10px;
+                color: #E6EDF3;
             }
 
             .slogan {
                 margin-bottom: 15px;
                 font-size: 1.4em;
                 font-style: italic;
+                color: #14d0ff;
             }
 
             .details {
                 p {
                     margin-top: 10px;
                     font-size: 1.1em;
+                    background-color: #0F161F;
+                    padding: 10px;
+                    border-radius: 8px;
                 }
+
+
             }
         }
 
@@ -332,59 +345,60 @@ body {
             color: white;
             height: 100vh;
             padding: 80px 20px;
-        }
-
-        h1 {
-            margin-bottom: 30px;
-            color: white;
-            font-weight: 600;
-            font-size: 3em;
-            text-align: center;
-        }
-
-        /* Cards Container */
-        #cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            width: 100%;
 
 
-            .card {
-                height: 200px;
-                width: 200px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                border: 1px solid #ccc;
-                border-radius: 10px;
-                overflow: hidden;
+            h1 {
+                margin-bottom: 30px;
+                color: #58A6FF;
+                font-weight: 600;
+                font-size: 3em;
                 text-align: center;
-                color: #F0F6FC;
-                background-color: #161B22;
-                /* background-color: white; */
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-                    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-                transition: transform 0.3s ease;
-
-                img {
-                    width: 80px;
-                    height: 80px;
-                    object-fit: contain;
-                    margin-bottom: 10px;
-                    border-radius: 10px;
-                }
-
-                h5 {
-                    font-size: 1.5em;
-                }
             }
 
-            .card:hover {
-                transform: scale(1.05);
+            /* Cards Container */
+            #cards {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                width: 100%;
+
+
+                .card {
+                    height: 200px;
+                    width: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid #ccc;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    text-align: center;
+                    color: #F0F6FC;
+                    background-color: #161B22;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+                        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+                    transition: transform 0.3s ease;
+
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        object-fit: contain;
+                        margin-bottom: 10px;
+                        border-radius: 10px;
+                    }
+
+                    h5 {
+                        font-size: 1.5em;
+                    }
+                }
+
+                .card:hover {
+                    transform: scale(1.05);
+                    box-shadow: rgba(16, 153, 212, 0.35) 0px 5px 15px;
+                }
             }
         }
 
@@ -440,9 +454,9 @@ body {
             margin-bottom: 50px;
 
 
-            #Projects h1 {
+            h1 {
                 margin-bottom: 40px;
-                color: white;
+                color: #58A6FF;
                 font-size: 3em;
                 font-weight: 600;
                 text-align: center;
@@ -465,13 +479,16 @@ body {
                 cursor: pointer;
                 border-radius: 15px;
             }
+            .card:hover{
+                box-shadow: rgba(32, 167, 224, 0.35) 0px 5px 15px;
+            }
 
             .card-inner {
                 width: 100%;
                 height: 100%;
                 position: relative;
                 transform-style: preserve-3d;
-                transition: transform 0.8s ease-in-out;
+                transition: transform 1s ease-in-out;
             }
 
             .card:hover .card-inner {
@@ -619,17 +636,16 @@ body {
             align-items: center;
             height: 100vh;
             font-family: 'Inter', 'Roboto', sans-serif;
-            /* margin: 0 300px; */
 
             h2 {
-                color: #ffffff;
+                color: #58A6FF;
                 font-size: 2.5em;
                 margin-bottom: 15px;
                 font-weight: 600;
             }
 
             h4 {
-                color: #ccc;
+                color: #E6EDF3;
                 font-size: 1.6em;
                 margin-bottom: 70px;
             }
