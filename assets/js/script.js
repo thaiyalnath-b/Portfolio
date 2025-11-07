@@ -80,6 +80,7 @@ const work_details = [
   { img: 'td.avif', title: 'To-Do-List', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/To-Do-List/", msg: "Developed a to-do list app using HTML, CSS, and JavaScript with features for adding, deleting, and completing tasks." },
   { img: 'ca.png', title: 'Calculator', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Calculator/", msg: "Developed a functional calculator using HTML, CSS, and JavaScript, supporting basic arithmetic operations with a responsive design." },
   { img: 'pf.png', title: 'Portfolio', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/Portfolio/", msg: "Built a personal portfolio using HTML, CSS, and JavaScript to showcase projects and skills with a responsive and user-friendly design." },
+  { img: 'finance.avif', title: 'Finance Tracker', tech: "( HTML, CSS, JavaScript )", link: "https://thaiyalnath-b.github.io/personal-Finance/", msg: "Developed a personal finance tracker to manage income and expenses with interactive charts, category filters, and a responsive interface for better financial insights." },
 ];
 
 function render(work) {
