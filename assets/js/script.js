@@ -12,6 +12,53 @@ navbarCollapse.addEventListener('hidden.bs.collapse', () => {
   icon.classList.replace('bi-x', 'bi-list');
 });
 
+// Loading Section
+let progress = 0;
+const interval = setInterval(() => {
+  progress++;
+  document.querySelector('.progress').style.width = progress + "%";
+  document.getElementById("percent").textContent = progress + "%";
+
+  if (progress >= 100) {
+    clearInterval(interval);
+
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    }, 200);
+  }
+}, 10);
+
+// Home Section Role
+function animateH2() {
+  const h2 = document.querySelector("#Home .name h2");
+  const text = h2.getAttribute("data-text");
+  h2.innerHTML = "";
+
+  text.split("").forEach((char, i) => {
+    const span = document.createElement("span");
+
+    if (char === " ") {
+      span.innerHTML = "&nbsp;";
+    } else {
+      span.textContent = char;
+    }
+
+    span.style.animationDelay = `${i * 0.15}s`;
+    h2.appendChild(span);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const h2 = document.querySelector("#Home .name h2");
+  h2.setAttribute("data-text", h2.textContent.trim());
+
+  animateH2();
+  setInterval(animateH2, 5000);
+});
+
+
+
 // Navbar Section
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");

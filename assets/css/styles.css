@@ -5,10 +5,6 @@
 }
 
 body {
-    /* background-image: url(../images/org.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh; */
     background-color: #0D1117;
 
     header {
@@ -86,6 +82,67 @@ body {
 
     main {
 
+        /* Loading Section */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+
+            .loader-content {
+                text-align: center;
+
+                h1 {
+                    font-size: 2rem;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 1rem;
+                    opacity: 0.7;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 400px;
+                height: 400px;
+                background: radial-gradient(circle, rgba(150, 0, 255, 0.3), transparent);
+                filter: blur(80px);
+            }
+
+            .progress-bar {
+                width: 250px;
+                height: 4px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+                margin: auto;
+                overflow: hidden;
+
+                .progress {
+                    width: 0%;
+                    height: 100%;
+                    background: linear-gradient(90deg, #a05cff, #e464ff);
+                    transition: width 0.1s linear;
+                }
+            }
+
+            #percent {
+                margin-top: 10px;
+                display: block;
+                font-size: 0.9rem;
+                opacity: 0.9;
+            }
+        }
+
+
         /* Home Section */
         #Home {
             display: flex;
@@ -154,6 +211,23 @@ body {
                 }
             }
 
+            .name {
+                animation: slideLeft 1s ease-out forwards;
+                opacity: 0;
+            }
+
+            .pic img {
+                animation: slideRight 1s ease-out forwards;
+                opacity: 0;
+            }
+
+            .name h2 span {
+                opacity: 0;
+                display: inline-block;
+                transform: translateX(-10px);
+                animation: letterAnim 0.25s forwards ease-out;
+            }
+            
         }
 
 
@@ -479,7 +553,8 @@ body {
                 cursor: pointer;
                 border-radius: 15px;
             }
-            .card:hover{
+
+            .card:hover {
                 box-shadow: rgba(32, 167, 224, 0.35) 0px 5px 15px;
             }
 
@@ -819,4 +894,42 @@ body {
 
 html {
     scroll-behavior: smooth;
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes letterAnim {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+        text-shadow: 0 0 0px #3d98d9;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        text-shadow: 0 0 8px #3d98d9;
+    }
 }
