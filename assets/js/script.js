@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Projects section
 const work_details = [
-  { img: 'i1.jpg', title: 'Instagram Clone', link: "https://instagram-tv75.vercel.app/", gh: "https://github.com/thaiyalnath-b/Instagram", msg: "Built a desktop-only Instagram clone using React with mock data, featuring dynamic post feeds, user profiles, and interactive functionality." },
+  { img: 'i1.jpg', title: 'Instagram Clone', link: "https://instagram-tv75.vercel.app/", gh: "https://github.com/thaiyalnath-b/Instagram", msg: "Built a fully responsive Instagram clone using React with mock data, featuring dynamic post feeds, user profiles, and interactive UI functionality." },
   { img: 'finance.avif', title: 'Finance Tracker', link: "https://thaiyalnath-b.github.io/personal-Finance/", gh: "https://github.com/thaiyalnath-b/personal-Finance", msg: "Developed a personal finance tracker to manage income and expenses with interactive charts, category filters, and a responsive interface." },
   { img: 'ec.jpeg', title: 'E-commerce', link: "https://thaiyalnath-b.github.io/Website/", gh: "https://github.com/thaiyalnath-b/Website", msg: "Developed a responsive e-commerce website using HTML, CSS, and JavaScript, featuring product listings and a dynamic shopping cart." },
   { img: 'weather.png', title: 'Weather Dashboard', link: "https://thaiyalnath-b.github.io/Weather-Dashboard/", gh: "https://github.com/thaiyalnath-b/Weather-Dashboard", msg: "Built a responsive Weather Dashboard using HTML, CSS, and JavaScript with real-time updates and city search functionality." },
