@@ -805,9 +805,10 @@ body {
 
         @media (max-width: 576px) {
 
-            h2{
+            h2 {
                 margin-left: 2%;
             }
+
             h4 {
                 text-align: center;
             }
@@ -815,9 +816,11 @@ body {
             p {
                 margin-left: 3px;
             }
+
             .share {
                 margin-left: 40px;
             }
+
             #Contact {
                 margin-bottom: 120px;
             }
