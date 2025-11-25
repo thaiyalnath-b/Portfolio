@@ -227,7 +227,7 @@ body {
                 transform: translateX(-10px);
                 animation: letterAnim 0.25s forwards ease-out;
             }
-            
+
         }
 
 
@@ -805,19 +805,19 @@ body {
 
         @media (max-width: 576px) {
 
-            h2,
+            h2{
+                margin-left: 2%;
+            }
             h4 {
-                margin-left: 15px;
+                text-align: center;
             }
 
             p {
                 margin-left: 3px;
             }
-
-            #reach {
-                margin-right: 15px;
+            .share {
+                margin-left: 40px;
             }
-
             #Contact {
                 margin-bottom: 120px;
             }
