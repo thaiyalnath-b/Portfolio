@@ -57,6 +57,16 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(animateH2, 5000);
 });
 
+// download Cv
+function downloadCV() {
+  const link = document.createElement("a");
+  link.href = "assets/resume/Thaiyalnath.pdf";
+  link.download = "Thaiyalnath.pdf";
+  link.click();
+
+}
+
+
 
 
 // Navbar Section
