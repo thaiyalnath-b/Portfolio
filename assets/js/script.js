@@ -106,6 +106,7 @@ const card_details = [
   { img: 'bs.png', title: 'Bootstrap' },
   { img: 'js.png', title: 'JavaScript' },
   { img: 'science.png', title: 'React' },
+  { img: 'sql.png', title: 'SQL' },
 ];
 
 function renderCard(card) {
