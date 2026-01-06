@@ -134,12 +134,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // Projects section
 const work_details = [
   { img: 'i1.jpg', title: 'Instagram Clone', link: "https://instagram-tv75.vercel.app/", gh: "https://github.com/thaiyalnath-b/Instagram", msg: "Built a fully responsive Instagram clone using React with mock data, featuring dynamic post feeds, user profiles, and interactive UI functionality." },
+  { img: 'ec.jpeg', title: 'E-commerce App', link: "https://react-e-commerce-thaiyalnath.vercel.app/", gh: "https://github.com/thaiyalnath-b/react_e-commerce_thaiyalnath", msg: "Built a fully responsive e-commerce web application using React, featuring reusable components, dynamic product rendering, and a state-managed shopping cart." },
   { img: 'finance.avif', title: 'Finance Tracker', link: "https://thaiyalnath-b.github.io/personal-Finance/", gh: "https://github.com/thaiyalnath-b/personal-Finance", msg: "Developed a personal finance tracker to manage income and expenses with interactive charts, category filters, and a responsive interface." },
-  { img: 'ec.jpeg', title: 'E-commerce', link: "https://react-e-commerce-thaiyalnath.vercel.app/", gh: "https://github.com/thaiyalnath-b/react_e-commerce_thaiyalnath", msg: "Built a fully responsive e-commerce web application using React, featuring reusable components, dynamic product rendering, and a state-managed shopping cart." },
   { img: 'weather.png', title: 'Weather Dashboard', link: "https://thaiyalnath-b.github.io/Weather-Dashboard/", gh: "https://github.com/thaiyalnath-b/Weather-Dashboard", msg: "Built a responsive Weather Dashboard using HTML, CSS, and JavaScript with real-time updates and city search functionality." },
-  { img: 'td.avif', title: 'To-Do-List', link: "https://thaiyalnath-b.github.io/To-Do-List/", gh: "https://github.com/thaiyalnath-b/To-Do-List", msg: "Developed a to-do list app using HTML, CSS, and JavaScript with features for adding, deleting, and completing tasks." },
-  { img: 'ca.png', title: 'Calculator', link: "https://thaiyalnath-b.github.io/Calculator/", gh: "https://github.com/thaiyalnath-b/Calculator", msg: "Developed a functional calculator using HTML, CSS, and JavaScript, supporting basic arithmetic operations with a responsive design." },
-  { img: 'pf.png', title: 'Portfolio', link: "https://thaiyalnath-b.github.io/Portfolio/", gh: "https://github.com/thaiyalnath-b/personal-Finance", msg: "Built a personal portfolio using HTML, CSS, and JavaScript to showcase projects and skills with a responsive and user-friendly design." },
+  { img: 'pf.png', title: 'Portfolio Website', link: "https://thaiyalnath-b.github.io/Portfolio/", gh: "https://github.com/thaiyalnath-b/personal-Finance", msg: "Built a personal portfolio using HTML, CSS, and JavaScript to showcase projects and skills with a responsive and user-friendly design." },
+  // { img: 'td.avif', title: 'To-Do-List', link: "https://thaiyalnath-b.github.io/To-Do-List/", gh: "https://github.com/thaiyalnath-b/To-Do-List", msg: "Developed a to-do list app using HTML, CSS, and JavaScript with features for adding, deleting, and completing tasks." },
+  // { img: 'ca.png', title: 'Calculator', link: "https://thaiyalnath-b.github.io/Calculator/", gh: "https://github.com/thaiyalnath-b/Calculator", msg: "Developed a functional calculator using HTML, CSS, and JavaScript, supporting basic arithmetic operations with a responsive design." },
+
 ];
 
 function render(work) {
